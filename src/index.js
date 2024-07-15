@@ -8,6 +8,10 @@ const port = 3000;
 const app = express();
 app.use(express.json());
 
+app.use('/', (req, res)=>{
+  res.send("hello from index page")
+})
+
 app.use('/', getRoutes);
 app.use('/', commentRoutes);
 
